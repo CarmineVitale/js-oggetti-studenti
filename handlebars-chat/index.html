@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+  <h2>CHAT</h2>
+
+    <div class="chat">
+        <input type="text" class="input" placeholder="Inserisci il testo da inviare">
+        <button class="button">INVIA</button> 
+    </div>
+    <div class="sms"></div>
+    
+
+
+    <!-- Tempaltes handlebars -->
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div class="message {{class}}">
+          <p class="testo"> {{testo}} </p>
+          <p class="orario"> {{orario}} </p>
+        </div>
+    </script>
+
+</body>
+</html><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
