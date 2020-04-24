@@ -1,9 +1,40 @@
 $(document).ready(function () {
     var input = $('.input');
     var button = $('.button');
+    
     //ottengo html 
     var source = $('#entry-template').html();
     var template = Handlebars.compile(source);
+
+    var prevChat = [
+        {
+            text: 'Buongiorno',
+            hour: '07:55'
+        },
+        {
+            text: 'Oggi si fa lezione?',
+            hour: '07:56'
+        },
+        {
+            text: 'Aspetto una tua risposta.',
+            hour: '07:57'
+        },
+    ];
+    for (var i = 0; i < prevChat.length; i++) {
+        var mess = prevChat[i];
+        var dati1 = {
+            testo: mess['text'],
+            orario: mess['hour'],
+            class: 'inviati'
+        }
+        var output = template(dati1);
+        $('.sms').append(output);
+    }
+    
+
+    
+
+
     //invio alla pressione di Enter
     input.keypress(function(e) {
         
